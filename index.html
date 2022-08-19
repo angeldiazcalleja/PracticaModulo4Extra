@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reservas hotel</title>
+    <link rel="stylesheet" href="site.css">
+</head>
+<body>
+    <h1 class="title">🏨 Hotel Las Vegas 🏨</h1>
+    <div class="booking" id="booking">
+        <div class="room-box">
+            <label class="label" for="room">Tipo de habitación</label>
+            <select name="room" class="select-menu" id="room-type-input">
+                <option value="standard" id="standard" class="room-type">Standard - 100€ / n</option>
+                <option value="junior" id="junior" class="room-type">Junior Suite - 120€ / n</option>
+                <option value="suite" id="suite" class="room-type">Suite - 150€ / n</option>
+            </select>
+        </div>
+        <div class="room-capacity-box">
+            <label class="label" for="room-capacity">Tamaño de la habitación</label>
+            <select name="room-capacity" class="select-menu" id="room-capacity">
+                <option value="single" id="single" class="capacity">Individual: reduce un 25% / n</option>
+                <option value="double" id="double" class="capacity">Doble</option>
+                <option value="triple" id="triple" class="capacity">Triple: incrementa un 25% / n</option>
+            </select>
+        </div>
+        <div class="nights-box">
+            <label class="label" for="nights">Número de noches </label>
+            <input value="1" type="number" id="nights-number">
+        </div>
+    
+        <div class="parking-box">
+            <label class="label" for="parking">Si necesita parking, indique el nº de noches (10€ / n)</label>
+            <input id="parking-nights" value="0" type="number">
+        </div>
+        <div class="spa-box">
+            <label class="label" for="spa">Opción SPA (+20€)</label>
+            <div class="checkbox-spa">
+                <input type="radio" name="spa" class="spa-included" id="spa-included">SÍ
+                <input type="radio" name="spa" class="no-spa" checked id="no-spa">NO
+            </div>
+        </div>
+        <div id="total-box" class="total-container">
+            <p class="final-price" id="final-price"></p>
+            <span>Disponemos de factura electrónica. </span>
+        </div>
+    </div>
+    <script src="app.JS"></script>
+</body>
+</html>
